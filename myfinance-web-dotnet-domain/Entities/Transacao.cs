@@ -1,4 +1,4 @@
-﻿namespace myfinance_web_dotnet_domain;
+﻿namespace myfinance_web_dotnet_domain.Entities;
 
 public class Transacao
 {
