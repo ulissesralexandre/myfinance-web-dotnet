@@ -38,7 +38,7 @@ namespace myfinance_web_dotnet_service
             _dbContext.SaveChanges();
         }
 
-        public List<Transacao> ListarRegistros()
+        public List<Transacao> ListarRegistro()
         {
             var dbSet = _dbContext.Transacao;
             return dbSet.ToList();

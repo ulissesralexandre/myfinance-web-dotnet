@@ -6,7 +6,7 @@ using System.Data.Common;
 
 namespace myfinance_web_dotnet_service
 {
-    public class PlanoContaService : IPlanoContaService
+    public class PlanoContaService : IPlanoContaServices
     {
         private readonly MyFinanceDbContext _dbContext;
         public PlanoContaService(MyFinanceDbContext dbContext)
@@ -38,7 +38,7 @@ namespace myfinance_web_dotnet_service
             _dbContext.SaveChanges();
         }
 
-        public List<PlanoConta> ListarRegistros()
+        public List<PlanoConta> ListarRegistro()
         {
             var dbSet = _dbContext.PlanoConta;
             return dbSet.ToList();

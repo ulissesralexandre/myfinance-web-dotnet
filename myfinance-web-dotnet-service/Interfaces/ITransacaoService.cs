@@ -1,15 +1,16 @@
+
 using myfinance_web_dotnet_domain.Entities;
 
 namespace myfinance_web_dotnet_service.Interfaces
 {
-    public class ITransacaoService
+    public interface ITransacaoService
     {
-        void Cadastrar(PlanoConta Entidade);
+        void Cadastrar(Transacao Entidade);
 
         void Excluir(int Id);
 
-        List<PlanoConta> ListarRegistro();
+        List<Transacao> ListarRegistro();
 
-        PlanoConta RetornarRegistro(int Id);
+        Transacao RetornarRegistro(int Id);
     }
 }

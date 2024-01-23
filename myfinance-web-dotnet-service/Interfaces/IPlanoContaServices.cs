@@ -1,9 +1,11 @@
+
 using myfinance_web_dotnet_domain.Entities;
 
 namespace myfinance_web_dotnet_service.Interfaces
 {
-    public class IPlanoContaService
+    public interface IPlanoContaServices
     {
+        
         void Cadastrar(PlanoConta Entidade);
 
         void Excluir(int Id);
@@ -13,3 +15,4 @@ namespace myfinance_web_dotnet_service.Interfaces
         PlanoConta RetornarRegistro(int Id);
     }
 }
+
