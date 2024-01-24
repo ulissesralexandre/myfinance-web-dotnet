@@ -2,6 +2,7 @@ using myfinance_web_dotnet_service.Interfaces;
 using myfinance_web_dotnet_domain.Entities;
 using myfinance_web_dotnet_infra;
 using System.Data.Common;
+using Microsoft.EntityFrameworkCore;
 
 
 namespace myfinance_web_dotnet_service
@@ -40,7 +41,7 @@ namespace myfinance_web_dotnet_service
 
         public List<Transacao> ListarRegistro()
         {
-            var dbSet = _dbContext.Transacao;
+            var dbSet = _dbContext.Transacao.Include(x=> x.PlanoConta);
             return dbSet.ToList();
         }
 
